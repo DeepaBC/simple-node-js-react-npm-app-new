@@ -18,8 +18,7 @@ pipeline {
             steps {
                 sh './jenkins/scripts/deliver.sh'
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
-                sh './jenkins/scripts/kill.sh'
-                args '-p 3000:3000
+                sh './jenkins/scripts/kill.sh'               
             }
         }
     }
